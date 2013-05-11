@@ -1,0 +1,17 @@
+body {
+  background-color: #f4f4f4;
+  background-image: url('../../img/background.png');
+  color: #34343b;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  letter-spacing: .1em;
+}
+
+.notice {
+	display: none;
+}
+
+img {
+	float: left;
+}
