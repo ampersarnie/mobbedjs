@@ -82,7 +82,6 @@ var mobbed	= function (options, complete) {
 		html	= document.documentElement.outerHTML;
 
 		if(html.match(/<\/html>/gi)) {
-			console.log('contender, ready!');
 			window.stop();
 		}
 
@@ -358,23 +357,6 @@ var mobbed	= function (options, complete) {
 		*/
 		xmlhttp	= new XMLHttpRequest();
 
-		/*
-			Event listener so we can wait for progress.
-			Read progress(); notes for a bit more info.
-		*/
-		requestComplete = false;
-        requestState    = 0;
-
-		xmlhttp.addEventListener("progress", function(evt) {
-			// console.log(evt.loaded + ' / ' + evt.total);
-			totalKB		= (evt.total / 1024).toPrecision(2);
-			progressKB	= (evt.loaded / 1024).toPrecision(2);
-
-			if(progressKB > 1) {
-				xmlhttp.abort();
-				requestComplete	= true;
-			}
-		}, false);
 		xmlhttp.open("HEAD", thisFile, true);
         // xmlhttp.open("GET", thisFile, true);
 		xmlhttp.send();

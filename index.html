@@ -8,10 +8,13 @@
 		<script src="js/mobbed.js"></script>
         <script>
 			mobbed({
-				exceptions	: 'script,link,.except',
+				exceptions	: 'script,.except',
 				replacement	: false,
 				identifier	: false
 			}, function(event) {
+
+				console.log(event);
+
                 if(event.network) {
                     var connection  = document.getElementsByClassName('connection');
                         connection[0].innerHTML = event.network;
